@@ -1,4 +1,4 @@
-import { $mebels } from '@/context/mebels'
+// import { $mebels } from '@/context/mebels'
 import { $mode } from '@/context/mode'
 import { useStore } from 'effector-react'
 import { useState } from 'react'
@@ -18,7 +18,7 @@ const CatalogItem = ({ item }: { item: IMebel }) => {
   const user = useStore($user)
   const shoppingCart = useStore($shoppingCart)
   const isInCart = shoppingCart.some((cartItem) => cartItem.mebelId === item.id)
-  const [spinner, setSpinner] = useState(false)
+  const [spinner] = useState(false)
   const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
 
   const toggleToCart = () => toggleCartItem(user.username, item.id, isInCart)

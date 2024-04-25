@@ -23,7 +23,7 @@ import CatalogItem from '@/components/modules/CatalogPage/CatalogItem'
 import ReactPaginate from 'react-paginate'
 import { IQueryParams } from '@/types/catalog'
 import { useRouter } from 'next/router'
-import { IMebel, IMebels } from '@/types/mebels'
+import { IMebels } from '@/types/mebels'
 import CatalogFiltres from '@/components/modules/CatalogPage/CatalogFiltres'
 import { usePopup } from '@/hooks/usePoup'
 import FilterSvg from '@/components/elements/FilterSvg/FilterSvg'
@@ -96,7 +96,7 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
         const offset = +query.offset - 1
         const result = await getMebelsFx(`/mebels?limit=20&offset=${offset}`)
         setCurrentPage(offset)
-        setMebels(isFilterInQuery ? filteredMebels : data)
+        setMebels(isFilterInQuery ? filteredMebels : result)
         return
       }
       setCurrentPage(0)

@@ -33,7 +33,7 @@ const ProfileDropDown = forwardRef<HTMLDivElement, IWrappedComponentProps>(
           </span>
         </button>
 
-        <AnimatePresence></AnimatePresence>
+        <AnimatePresence />
         <AnimatePresence>
           {open && (
             <motion.ul

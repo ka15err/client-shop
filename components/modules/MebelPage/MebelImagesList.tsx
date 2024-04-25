@@ -2,7 +2,6 @@
 import { useStore } from 'effector-react'
 import { useState } from 'react'
 import { $mebel } from '@/context/mebel'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
 import MebelImagesItem from './MebelImagesItem'
 import styles from '@/styles/mebel/index.module.scss'
 

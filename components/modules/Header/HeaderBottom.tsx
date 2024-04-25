@@ -9,13 +9,12 @@ import CartPopup from './CartPopup/CartPopup'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { setDisableCart } from '@/context/shopping-cart'
 import styles from '@/styles/header/index.module.scss'
-import SearchSvg from '@/components/elements/SearchSvg/SearchSvg'
+// import SearchSvg from '@/components/elements/SearchSvg/SearchSvg'
 
 const HeaderBottom = () => {
   const isMedia950 = useMediaQuery(950)
   const isMedia580 = useMediaQuery(580)
   const mode = useStore($mode)
-  const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
   const router = useRouter()
 
   useEffect(() => {

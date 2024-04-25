@@ -17,7 +17,7 @@ import { categoriesOptions } from '@/utils/selectContents'
 import { useStore } from 'effector-react'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { InputActionMeta } from 'react-select'
+// import { InputActionMeta } from 'react-select'
 import Select from 'react-select'
 
 const FilterSelect = ({

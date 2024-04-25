@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { useStore } from 'effector-react'
-import CityButton from '@/components/elements/CityButton/CityButton'
 import ProfileDropdown from './ProfileDropdown'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import ModeToggler from '@/components/elements/ModeToggler/ModeToggler'

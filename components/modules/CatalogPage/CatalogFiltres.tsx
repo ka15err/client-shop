@@ -1,7 +1,7 @@
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import CatalogFiltresDesktop from './CatalogFiltersDesktop'
 import { ICatalogFiltersProps } from '@/types/catalog'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify'
 import {
   $mebelManufacturers,
@@ -61,14 +61,12 @@ const CatalogFiltres = ({
       const priceQuery = isPriceRangeChanged
         ? `&priceFrom=${priceFrom}&priceTo=${priceTo}`
         : ''
-
       const mebelsManu = mebelManufacturers
         .filter((item) => item.checked)
         .map((item) => item.title)
       const mebelsType = typeMebel
         .filter((item) => item.checked)
         .map((item) => item.title)
-
       const encodedMebelManuQuery = encodeURIComponent(
         JSON.stringify(mebelsManu)
       )
@@ -77,9 +75,7 @@ const CatalogFiltres = ({
       )
       const mebelManuQuery = `&mebel_manufacturer=${encodedMebelManuQuery}`
       const mebelTypeQuery = `&type=${encodedMebelTypeQuery}`
-
       const initialPage = currentPage > 0 ? 0 : currentPage
-
       if (mebelsManu.length && mebelsType.length && isPriceRangeChanged) {
         updateParamsAndFitlters(
           {
@@ -93,7 +89,6 @@ const CatalogFiltres = ({
         )
         return
       }
-
       if (isPriceRangeChanged) {
         updateParamsAndFitlters(
           {
@@ -104,7 +99,6 @@ const CatalogFiltres = ({
           `${initialPage}${priceQuery}`
         )
       }
-
       if (mebelsManu.length && mebelsType.length) {
         updateParamsAndFitlters(
           {
@@ -114,10 +108,8 @@ const CatalogFiltres = ({
           },
           `${initialPage}${mebelManuQuery}${mebelTypeQuery}`
         )
-
         return
       }
-
       if (mebelsManu.length) {
         updateParamsAndFitlters(
           {

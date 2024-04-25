@@ -34,7 +34,7 @@ function Catalog({ query }: { query: IQueryParams }) {
               getTextGenerator={getTextGenerator}
             />
             <CatalogPage query={query} />
-            <div className="overlay"></div>
+            <div className="overlay" />
           </main>
         </Layout>
       )}

@@ -24,7 +24,7 @@ function Dashboard() {
         <Layout>
           <main>
             <DashboardPage />
-            <div className="overlay"></div>
+            <div className="overlay" />
           </main>
         </Layout>
       )}
