@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
-// import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
+import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import CatalogPage from '@/components/tempelates/CatalogPage/CatalogPage'
 import { IQueryParams } from '@/types/catalog'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 import { useCallback } from 'react'
 function Catalog({ query }: { query: IQueryParams }) {
-  // const { shouldLoadContent } = useRedirectByUserCheck()
+  const { shouldLoadContent } = useRedirectByUserCheck()
   const getDefaultTextGenerator = useCallback(
     (subpath: string) => subpath.replace('catalog', 'Каталог'),
     []
@@ -15,8 +15,7 @@ function Catalog({ query }: { query: IQueryParams }) {
   return (
     <>
       <Head>
-        {/* <title>Mebel.kz | {shouldLoadContent ? 'Каталог' : ''}</title> */}
-        <title>Mebel.kz | 'Каталог' </title>
+        <title>Mebel.kz | {shouldLoadContent ? 'Каталог' : ''}</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
