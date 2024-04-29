@@ -20,14 +20,14 @@ function Dashboard() {
           href="/img/white-fon-logo.svg"
         />
       </Head>
-      {shouldLoadContent && (
-        <Layout>
-          <main>
-            <DashboardPage />
-            <div className="overlay" />
-          </main>
-        </Layout>
-      )}
+      {/* {shouldLoadContent && ( */}
+      <Layout>
+        <main>
+          <DashboardPage />
+          <div className="overlay" />
+        </main>
+      </Layout>
+      {/* )} */}
     </>
   )
 }
