@@ -26,7 +26,7 @@ const ContactsPage = ({ isWholesaleBuyersPage = false }) => {
                 <span>+7 (777) 001-77-77</span>
               </p>
               <p>
-                Либо опишите суть заказа в форме обртной связи и мы с вами
+                Либо опишите суть заказа в форме обратной связи, и мы с вами
                 свяжемся.
               </p>
             </div>
@@ -52,11 +52,11 @@ const ContactsPage = ({ isWholesaleBuyersPage = false }) => {
                 <span> +7 (777) 001-77-77</span>
               </li>
               <li className={`${styles.contacts__list__item} ${darkModeClass}`}>
-                <span>Время приемок завок:</span>
+                <span>время приёма заявок</span>
                 <span> Пн-Вс: с 8:00 до 22:00</span>
               </li>
               <li className={`${styles.contacts__list__item} ${darkModeClass}`}>
-                <span>Прием заказов электронным способом на сайте:</span>
+                <span>Приём заказов в электронном виде на сайте:</span>
                 <span> круглосуточно</span>
               </li>
               <li className={`${styles.contacts__list__item} ${darkModeClass}`}>

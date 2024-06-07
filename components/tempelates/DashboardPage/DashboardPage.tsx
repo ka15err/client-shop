@@ -52,7 +52,7 @@ const DashboardPage = () => {
           )}
         </AnimatePresence>
         <h2 className={`${styles.dashboard__title} ${darkModeClass}`}>
-          Мебели для офиса
+          Мебель для офиса
         </h2>
         <div className={styles.dashboard__mebels}>
           <h3 className={`${styles.dashboard__mebels__title} ${darkModeClass}`}>
@@ -62,7 +62,7 @@ const DashboardPage = () => {
         </div>
         <div className={styles.dashboard__mebels}>
           <h3 className={`${styles.dashboard__mebels__title} ${darkModeClass}`}>
-            Новинкий
+            Новинка
           </h3>
           <DashboardSlider items={newMebels.rows || []} spinner={spinner} />
         </div>
